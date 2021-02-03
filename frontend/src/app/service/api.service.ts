@@ -8,7 +8,7 @@ import {ApiResponse} from "../model/api.response";
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  host: string = 'localhost:8050'
+  host: string = 'http://localhost:8050'
   baseUrl: string = this.host +'/evento';
 
   login(loginPayload) : Observable<ApiResponse> {
