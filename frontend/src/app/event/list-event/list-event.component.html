@@ -1,0 +1,24 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin: auto"> Eventos</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addEvent()"> Crear evento</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th>Tipo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let event of events">
+      <td class="hidden">{{event.id}}</td>
+      <td>{{event.name_event}}</td>
+      <td>{{event.date_event}}</td>
+      <td>{{event.type_event}}</td>
+      <td><button class="btn btn-success" (click)="deleteEvent(event)"> Borrar</button>
+        <button class="btn btn-success" (click)="editEvent(event)" style="margin-left: 20px;"> Editar</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

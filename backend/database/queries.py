@@ -1,0 +1,7 @@
+insert_user_query = "INSERT INTO users VALUES ('{}', '{}');"
+login_comparation = "SELECT username FROM users WHERE username='{}' AND user_pass='{}';"
+all_eventos_query = "SELECT id, name_event, date_event, type_event FROM events WHERE username='{}' ORDER BY date_event DESC;"
+insert_event_query = "INSERT INTO events (username, date_event, name_event, type_event) VALUES ('{}', '{}', '{}', '{}');"
+get_evento_query = "SELECT * FROM events WHERE username='{}' AND id={};"
+update_event_query = "UPDATE events SET date_event='{}', name_event='{}', type_event='{}' WHERE username='{}' AND id={};"
+delete_event_query = "DELETE FROM events WHERE username='{}' AND id={};"
